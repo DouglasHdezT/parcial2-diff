@@ -16,7 +16,7 @@ const PATHS = {
 const indexMain = () => { 
     fetchData(`${BASE_URL}/sets`, createAllSets);
     document.querySelector(".deck-button>button").onclick = () => { 
-        window.location.href = "/deck.html"
+        window.location.href = "./deck.html"
     }
 }
 
@@ -44,15 +44,16 @@ const deckMain = () => {
 
 //On load
 window.onload = () => { 
+    const hostedPath ="/" + window.location.pathname.split("/")[2];
     switch (window.location.pathname) {
-        case PATHS.INDEX:
+        case hostedPath + PATHS.INDEX:
         case PATHS.ROOT:
             indexMain();
             break;
-        case PATHS.SET:
+        case hostedPath + PATHS.SET:
             setMain();
             break;
-        case PATHS.DECK:
+        case hostedPath + PATHS.DECK:
             deckMain();
             break
         default:
@@ -77,7 +78,7 @@ const createSetCard = (setInfo) => {
     container.classList.add("set-card");
     container.onclick = () => {
         localStorage.setItem(KEYS.SELECTED_SET, JSON.stringify(setInfo));
-        window.location.href = "/set.html"
+        window.location.href = "./set.html"
     }
 
     const cardHTML = `
