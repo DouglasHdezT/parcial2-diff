@@ -1,0 +1,78 @@
+article.card-card{
+    width: 275px;
+    margin: 0.5rem;
+
+    position: relative;
+
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+    display: flex;
+
+    img:first-child{
+        width: 100%;
+    }
+
+    img.check{
+        display: none;
+
+        width: 50px;
+        height: 50px;
+
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+
+        transition: ease-in-out all 250ms;
+    }
+
+    &.decked>img.check{
+        display: block;
+    }
+
+    .add, .remove{
+        visibility: hidden;
+
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            padding: 0.5em;
+
+            font-size: 1.5em;
+            font-family: "Montserrat", sans-serif;
+            color: white;
+
+            border: 1px white solid;
+            border-radius: 15px;
+        }
+    }
+
+    .add{
+        background-color: #4caf4f88;
+    }
+
+    .remove {
+        background-color: #dc143c88;
+    }
+
+    &.decked:hover .remove,
+    &.decked:focus .remove,
+    &.decked:focus-within .remove{
+        visibility: visible;
+    }
+
+    &:not(.decked):hover .add,
+    &:not(.decked):focus .add,
+    &:not(.decked):focus-within .add {
+        visibility: visible;
+    }
+}

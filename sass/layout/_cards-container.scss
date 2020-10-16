@@ -1,9 +1,11 @@
-section#cards-container {
+section.cards-container {
     width: 100%;
     padding: 2rem;
 
     display: flex;
     flex-direction: column;
+
+    position: relative;
 
     h2{
         margin: 1rem 0;
@@ -15,11 +17,12 @@ section#cards-container {
         border-bottom: 1px solid #999;
     }
 
-    div#items {
+    div.items {
         width: 100%;
         display: flex;
 
         flex-wrap: wrap;
         justify-content: space-evenly;
+        align-items: center;
     }
 }
