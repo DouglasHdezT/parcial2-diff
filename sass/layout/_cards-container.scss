@@ -1,0 +1,25 @@
+section#cards-container {
+    width: 100%;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    h2{
+        margin: 1rem 0;
+        padding: 0.2rem 1rem;
+
+        font-family: "Raleway", sans-serif;
+        font-size: 1.7em;
+
+        border-bottom: 1px solid #999;
+    }
+
+    div#items {
+        width: 100%;
+        display: flex;
+
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
