@@ -118,7 +118,9 @@ const createCardCard = (cardInfo) => {
 
     const container = document.createElement("article");
     container.classList.add("card-card");
-    container.dataset.id = id
+    container.dataset.id = id;
+    container.tabIndex = 0;
+    container.setAttribute("role", "button");
 
     const { code } = JSON.parse(localStorage.getItem(KEYS.SELECTED_SET)) || undefined;
 
@@ -216,7 +218,7 @@ const createCardOnDeck = (cardInfo, setCode) => {
     container.classList.add("card-card");
     container.dataset.id = id
     container.tabIndex = 0;
-    container.setAttribute("role", "link")
+    container.setAttribute("role", "button");
 
     if (isCardInDeck(id, setCode)) { 
         container.classList.add("decked")
