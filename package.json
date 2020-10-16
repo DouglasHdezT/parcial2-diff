@@ -1,0 +1,14 @@
+{
+  "name": "parcial2-diferido",
+  "version": "1.0.0",
+  "description": "Solution of 2nd parcial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass -w -o css sass"
+  },
+  "keywords": [
+    "Parcial"
+  ],
+  "author": "Douglas Hernandez"
+}
