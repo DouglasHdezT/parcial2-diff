@@ -44,22 +44,6 @@ const deckMain = () => {
 
 //On load
 window.onload = () => { 
-    const hostedPath ="/" + window.location.pathname.split("/")[2];
-    switch (window.location.pathname) {
-        case hostedPath + PATHS.INDEX:
-        case PATHS.ROOT:
-            indexMain();
-            break;
-        case hostedPath + PATHS.SET:
-            setMain();
-            break;
-        case hostedPath + PATHS.DECK:
-            deckMain();
-            break
-        default:
-            break;
-    }
-
     document.addEventListener("keyup", (event) => {
         if (event.code === "Enter") { 
             const item = document.querySelector(":focus");
